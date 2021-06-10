@@ -8,7 +8,6 @@ cd $HOME
 mkdir .dotfiles && cd .dotfiles
 
 # hosts
-sudo mv 
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/hosts
 sudo cp hosts /etc/hosts
 sudo chmod o+r /etc/hosts
@@ -27,7 +26,8 @@ cd ..
 sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 
-# diskutil apfs updatePreboot /
+# Justincase, lol..  Just in case!
+    # diskutil apfs updatePreboot /
 
 # Clean up..
 cd $HOME
