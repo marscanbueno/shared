@@ -1,5 +1,8 @@
 
+cat .install.sh
+
 # ask for password up-front.
+echo ""
 sudo -v
 
 # Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
