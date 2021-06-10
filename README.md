@@ -19,3 +19,4 @@ curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/.install.sh
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles/)
 * [Kevin Suttle](http://kevinsuttle.com/) and his [dotfiles repository](https://github.com/kevinSuttle/dotfiles) and [macOS-Defaults project](https://github.com/kevinSuttle/macOS-Defaults)
 * [Armin Briegel](https://scriptingosx.com/) and his [repositories](https://github.com/scriptingosx?tab=repositories)
+* [Stephen Black](https://stevenblack.com) and his [hosts repositories](https://github.com/StevenBlack/hosts)
