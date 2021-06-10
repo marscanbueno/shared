@@ -44,6 +44,6 @@ sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
     # diskutil apfs updatePreboot /
 
 # Clean up..
-cd $HOME
-rm -rf .dotfiles
-rm -rf .install.sh
+# cd $HOME
+# rm -rf .dotfiles
+# rm -rf .install.sh
