@@ -15,10 +15,10 @@ sudo chmod o+r /etc/motd
 
 # policybanner.rtfd
 
-mkdir policybanner.rtfd && cd policybanner.rtfd
-curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/policybanner.rtfd/TXT.rtf
-curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/policybanner.rtfd/LOGO.png
-sudo cp -r policybanner.rtfd /Library/Security/PolicyBanner.rtfd
+mkdir PolicyBanner.rtfd && cd PolicyBanner.rtfd
+curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/TXT.rtf
+curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/LOGO.png
+sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 
 # diskutil apfs updatePreboot /
