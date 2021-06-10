@@ -1,5 +1,5 @@
 # .update_security.sh
-
+echo ""
 echo ".update_security.sh"
 
 # hosts
@@ -28,3 +28,4 @@ sudo rm -rfv PolicyBanner.rtfd
 
 # flush DNS cache
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+echo ""
