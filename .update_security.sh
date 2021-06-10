@@ -30,6 +30,9 @@ sudo rm -rfv PolicyBanner.rtfd
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 echo ""
 
-#
+# Clean up..
 echo "Deleting:"
 sudo rm -rfv .update_security.sh
+cd $HOME
+sudo rm -rfv .dotfiles
+
