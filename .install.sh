@@ -26,4 +26,5 @@ sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 
 # Clean up..
 cd $HOME
+rm -rf .dotfiles
 rm -rf .install.sh
