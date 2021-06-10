@@ -31,4 +31,5 @@ sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 echo ""
 
 #
+echo "Deleting:"
 sudo rm -rfv .update_security.sh
