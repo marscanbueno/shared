@@ -1,6 +1,6 @@
 
 cd $HOME
-mkdir .install && cd .install
+mkdir .dotfiles && cd .dotfiles
 
 # hosts
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/hosts
