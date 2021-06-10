@@ -21,6 +21,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 cd $HOME
 mkdir .dotfiles && cd .dotfiles
 
+# .update_security.sh
+echo ""
+echo ".update_security.sh.."
+curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/.update_security.sh
+
 # hosts
 echo ""
 echo "fetching hosts.."
