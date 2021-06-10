@@ -29,3 +29,6 @@ sudo rm -rfv PolicyBanner.rtfd
 # flush DNS cache
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 echo ""
+
+#
+sudo rm -rfv .update_security.sh
