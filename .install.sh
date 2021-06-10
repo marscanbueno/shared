@@ -18,6 +18,7 @@ sudo chmod o+r /etc/motd
 mkdir PolicyBanner.rtfd && cd PolicyBanner.rtfd
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/TXT.rtf
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/LOGO.png
+cd ..
 sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 
