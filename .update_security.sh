@@ -1,6 +1,7 @@
 # .update_security.sh
 echo ""
 echo ".update_security.sh"
+echo ""
 
 # hosts
 cd $HOME/.dotfiles
@@ -35,4 +36,5 @@ echo "Deleting:"
 sudo rm -rfv .update_security.sh
 cd $HOME
 sudo rm -rfv .dotfiles
+echo ""
 
