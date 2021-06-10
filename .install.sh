@@ -18,8 +18,11 @@ sudo chmod o+r /etc/motd
 mkdir policybanner.rtfd && cd policybanner.rtfd
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/policybanner.rtfd/TXT.rtf
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/policybanner.rtfd/Logo.png
-sudo cp policybanner.rtfd /Library/Security/PolicyBanner.rtfd
+sudo cp -r policybanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 
+# diskutil apfs updatePreboot /
+
+# Clean up..
 cd $HOME
 rm -rf .install.sh
