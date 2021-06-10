@@ -1,4 +1,13 @@
 
+# creates a new terminal window
+function new() {
+    if [[ $# -eq 0 ]]; then
+        open -a "Terminal" "$PWD"
+    else
+        open -a "Terminal" "$@"
+    fi
+}
+
 cat .install.sh
 
 # ask for password up-front.
