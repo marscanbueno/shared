@@ -23,6 +23,8 @@ sudo rm -rfv motd
 cd $HOME/.dotfiles
 sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
+sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd/NWOPCS2023.png
+sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd/TXT.rtf
 echo ""
 echo "Deleting:"
 sudo rm -rfv PolicyBanner.rtfd
