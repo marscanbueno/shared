@@ -21,6 +21,7 @@ sudo rm -rfv motd
 
 # policybanner.rtfd
 cd $HOME/.dotfiles
+sudo rm -rfv PolicyBanner.rtfd
 sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd/NWOPCS2023.png
