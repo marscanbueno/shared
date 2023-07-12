@@ -34,6 +34,9 @@ sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
     cd $folder_path/shared-main
     sudo mv PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
     sudo chmod o+rx /Library/Security/PolicyBanner.rtfd
+    sudo chmod o+rx /Library/Security/TXT.rtf
+    sudo chmod o+rx /Library/Security/NWOPCS.png
+
     sudo rm -rfv PolicyBanner.rtfd
     sudo mv hosts /etc/hosts
     sudo chmod o+r /etc/hosts
