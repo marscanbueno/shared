@@ -19,16 +19,18 @@ echo ""
 echo "Deleting:"
 sudo rm -rfv motd
 
+echo "Deleting old PolicyBanner:"
+cd $HOME/.dotfiles
+sudo rm -rfv /Library/Security/PolicyBanner.rtfd
+echo ""
+
 # policybanner.rtfd
 cd $HOME/.dotfiles
-sudo rm -rfv PolicyBanner.rtfd
 sudo cp -r PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+rx /Library/Security/PolicyBanner.rtfd
 sudo chmod -R o+r /Library/Security/PolicyBanner.rtfd/NWOPCS.png
 sudo chmod -R o+r /Library/Security/PolicyBanner.rtfd/TXT.rtf
 echo ""
-echo "Deleting:"
-sudo rm -rfv PolicyBanner.rtfd
 
 # Update Preboot
 diskutil apfs updatePreboot /
