@@ -1,12 +1,12 @@
 #!/bin/bash
 
+# assume current user
+sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
+
 # .update_security.sh
 echo ""
 echo ".update_security.sh"
 echo ""
-
-# assume current user
-sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
 
 # Specify the path to the folder you want to check
     folder_path="$HOME/.dotfiles"
@@ -32,9 +32,9 @@ sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
     echo ""
     echo "Installing.."
     cd $folder_path/shared-main
-    sudo mv PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
+    sudo mv PolicyBanner.rtfd /Library/Security
     sudo chmod o+r /Library/Security/PolicyBanner.rtfd/TXT.rtf
-    sudo chmod o+r /Library/Security/PolicyBanner.rtfd/NWOPCS.png
+    sudo chmod o+r /Library/Security/PolicyBanner.rtfd/PolicyBanner.rtfd/NWOPCS.png
     sudo chmod o+rx /Library/Security/PolicyBanner.rtfd
     sudo rm -rfv PolicyBanner.rtfd
     sudo mv hosts /etc/hosts
