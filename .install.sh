@@ -1,55 +1,51 @@
-
-# creates a new terminal window
-
-function new() {
-    if [[ $# -eq 0 ]]; then
-        open -a "Terminal" "$PWD"
-    else
-        open -a "Terminal" "$@"
-    fi
-}
-
-echo ".install.sh 2021.0610"
-
-# ask for password up-front.
+# .update_policybanner.sh
 echo ""
-sudo -v
+echo ".update_policybanner.sh"
+echo ""
 
-# Keep-alive: update existing sudo time stamp if set, otherwise do nothing.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+# Will run all commands as the user
+sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
 
 cd $HOME
-mkdir .dotfiles && cd .dotfiles
+mkdir -v .dotfiles
+cd .dotfiles
 
 # .update_security.sh
 echo ""
-echo ".update_security.sh.."
+echo "copying files.."
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/.update_security.sh
-
-# hosts
-echo ""
-echo "fetching hosts.."
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/hosts
-
-# motd
-echo ""
-echo "fetching motd.."
 curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/motd
-
-# policybanner.rtfd
 echo ""
-echo "fetching PolicyBanner.rtfd.."
-mkdir PolicyBanner.rtfd && cd PolicyBanner.rtfd
-curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/TXT.rtf
-curl -LJO https://raw.githubusercontent.com/marscanbueno/shared/main/PolicyBanner.rtfd/LOGO.png
 
-# Justincase, lol..  Just in case!
+echo ""
+echo "copying files.."
+wget https://github.com/username/repo/raw/master/PolicyBanner.rtfd.zip
 
-    # diskutil apfs updatePreboot /
+# Check if old PolicyBanner.rtf exists
+if [ -f /Library/Security/PolicyBanner.rtfd ]; then
+    # Force delete old PolicyBanner.rtfd
+    sudo rm -rfv /Library/Security/PolicyBanner.rtfd
+fi
 
-new $HOME/.dotfiles
+# Unzip PolicyBanner.rtfd.zip
+unzip PolicyBanner.rtfd.zip
 
-# Clean up..
-# cd $HOME
-# rm -rf .dotfiles
-# rm -rf .install.sh
+# Move PolicyBanner.rtfd to /Library/Security/
+sudo mv PolicyBanner.rtfd /Library/Security/
+
+cd ~
+sudo rm -rfv ~/.dotfiles
+
+# set volume
+osascript -e "set volume output volume 30"
+
+say "Security settings downloaded!"
+echo "Security settings downloaded!"
+
+# open terminal
+open -a Terminal
+sh .update_security.sh
+history -p
+echo ""
+echo ""

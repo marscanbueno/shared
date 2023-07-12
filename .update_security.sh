@@ -20,7 +20,6 @@ echo "Deleting:"
 sudo rm -rfv motd
 
 echo "Deleting old PolicyBanner:"
-cd $HOME/.dotfiles
 sudo rm -rfv /Library/Security/PolicyBanner.rtfd
 echo ""
 
@@ -46,3 +45,9 @@ cd $HOME
 sudo rm -rfv .dotfiles
 echo ""
 
+# set volume
+osascript -e "set volume output volume 30"
+say "Security settings downloaded!"
+echo "Security settings downloaded!"
+
+history -p
