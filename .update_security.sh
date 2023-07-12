@@ -43,7 +43,11 @@ sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
     sudo rm -rfv motd
 
 # flush DNS cache & Update Preboot
+    echo ""
+    echo "Flushing DNS Cache"
     sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
+        echo ""
+    echo "Updating Preboot"
     diskutil apfs updatePreboot /
     echo ""
 
