@@ -21,14 +21,18 @@ sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
     fi
 
 # Check if old PolicyBanner.rtfd exists
+    echo ""
+    echo "check if policy banner exists"
     if [ -f /Library/Security/PolicyBanner.rtfd ]; then
         # Force delete old PolicyBanner.rtfd
         sudo rm -rfv /Library/Security/PolicyBanner.rtfd
     fi
 
 # install
+    echo ""
+    echo "Installing.."
     cd $folder_path/shared-main
-    sudo mv PolicyBanner.rtfd /Library/Security/
+    sudo mv PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
     sudo chmod o+rx /Library/Security/PolicyBanner.rtfd
     sudo rm -rfv PolicyBanner.rtfd
     sudo mv hosts /etc/hosts
