@@ -19,7 +19,7 @@ say "Security settings downloaded!"
     echo "Security settings downloaded!"
 
 # open terminal
-    open -a Terminal
+    open -a Terminal $HOME/.dotfiles/shared-main
     history -p
     echo ""
     echo ""
