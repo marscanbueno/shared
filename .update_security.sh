@@ -30,6 +30,9 @@ echo ""
 echo "Deleting:"
 sudo rm -rfv PolicyBanner.rtfd
 
+# Update Preboot
+diskutil apfs updatePreboot /
+
 # flush DNS cache
 sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder
 echo ""
