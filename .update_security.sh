@@ -33,10 +33,9 @@ sudo -u $(stat -f "%Su" /dev/console) /bin/sh <<'END'
     echo "Installing.."
     cd $folder_path/shared-main
     sudo mv PolicyBanner.rtfd /Library/Security/PolicyBanner.rtfd
-    sudo chmod o+rx /Library/Security/PolicyBanner.rtfd
     sudo chmod o+r /Library/Security/PolicyBanner.rtfd/TXT.rtf
     sudo chmod o+r /Library/Security/PolicyBanner.rtfd/NWOPCS.png
-
+    sudo chmod o+rx /Library/Security/PolicyBanner.rtfd
     sudo rm -rfv PolicyBanner.rtfd
     sudo mv hosts /etc/hosts
     sudo chmod o+r /etc/hosts
