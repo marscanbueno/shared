@@ -20,6 +20,7 @@ say "Security settings downloaded!"
 
 # open terminal
     open -a Terminal $HOME/.dotfiles/shared-main
+    open -a Finder /Library/Security
     history -p
     echo ""
     echo ""
